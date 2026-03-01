@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { FaDownload } from "react-icons/fa";
-
+import { 
+  FaGithub, 
+  FaLinkedin, 
+  FaEnvelope, 
+  FaDownload, 
+  FaAddressBook, 
+  FaTools, 
+  FaFolderOpen, 
+  FaStar 
+} from "react-icons/fa";
 
 function App() {
   return (
@@ -57,142 +64,147 @@ function App() {
       </section>
 
       {/* ABOUT */}
-<section id="about" className="py-24 px-6 text-center bg-gray-900 relative overflow-hidden">
+      <section id="about" className="py-24 px-6 text-center bg-gray-900 relative overflow-hidden">
 
-  {/* Floating AI Emojis */}
-  <motion.div
-    className="absolute top-10 left-5 text-4xl opacity-70"
-    animate={{ y: [0, 20, 0] }}
-    transition={{ repeat: Infinity, duration: 4 }}
-  >
-    🤖
-  </motion.div>
+        {/* Floating AI Emojis */}
+        <motion.div
+          className="absolute top-10 left-5 text-4xl opacity-70"
+          animate={{ y: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 4 }}
+        >
+          🤖
+        </motion.div>
 
-  <motion.div
-    className="absolute top-1/2 right-10 text-4xl opacity-70"
-    animate={{ y: [0, -25, 0] }}
-    transition={{ repeat: Infinity, duration: 5 }}
-  >
-    🧠
-  </motion.div>
+        <motion.div
+          className="absolute top-1/2 right-10 text-4xl opacity-70"
+          animate={{ y: [0, -25, 0] }}
+          transition={{ repeat: Infinity, duration: 5 }}
+        >
+          🧠
+        </motion.div>
 
-  <motion.h2
-    className="text-4xl font-bold mb-6 text-cyan-400 animate-pulse"
-    initial={{ opacity: 0, y: -20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-  >
-    About Me 🤖
-  </motion.h2>
+        <motion.h2
+          className="text-4xl font-bold mb-6 text-cyan-400 animate-pulse"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          About Me 🤖
+        </motion.h2>
 
-  <motion.p
-    className="max-w-3xl mx-auto text-gray-300 text-lg mb-10"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 1, delay: 0.3 }}
-  >
-    Hello! I’m <span className="text-cyan-400 font-semibold">Charulata</span>, 
-    a second-year Computer Science student specializing in 
-    <span className="text-purple-400 font-semibold"> Artificial Intelligence</span> 🤖.  
-    I’m passionate about building innovative AI-driven solutions, exploring 
-    modern technologies, and contributing to impactful tech projects ⚡.
-  </motion.p>
+        <motion.p
+          className="max-w-3xl mx-auto text-gray-300 text-lg mb-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          I’m <span className="text-cyan-400 font-semibold">a second-year Computer Science student </span>, 
+          specializing in 
+          <span className="text-purple-400 font-semibold"> Artificial Intelligence</span> 🤖.  
+          I’m passionate about building innovative AI-driven solutions, exploring 
+          modern technologies, and contributing to impactful tech projects ⚡.
+        </motion.p>
 
-  {/* Download Resume Button */}
-  <motion.a
-  href="/resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  download
-  className="inline-flex items-center gap-2 bg-cyan-400 text-gray-900 px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition"
->
-  <FaDownload />
-  <span>Download Resume 📄</span>
-</motion.a>
-</section>
-{/* PROJECTS */}
-<section id="projects" className="py-24 px-6 bg-gray-950">
-  <h2 className="text-4xl font-bold text-center mb-12 text-white tracking-wide">
-    Projects
-  </h2>
+        {/* Download Resume Button */}
+        <motion.a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+          className="inline-flex items-center gap-2 bg-cyan-400 text-gray-900 px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition"
+        >
+          <FaDownload />
+          <span>Download Resume 📄</span>
+        </motion.a>
+      </section>
 
-  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {/* PROJECTS */}
+      <section id="projects" className="py-24 px-6 bg-gray-950">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white flex justify-center items-center gap-3">
+          <FaFolderOpen />
+          Projects
+        </h2>
 
-    {/* PORTFOLIO PROJECT */}
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
-    >
-      <h3 className="text-2xl font-semibold mb-4 text-white">
-        Portfolio Website
-      </h3>
-      <p className="text-gray-400 mb-4">
-        A responsive personal portfolio website built using React, Tailwind CSS, and Framer Motion. It showcases skills, projects, and includes a resume download.
-      </p>
-      <p className="text-sm text-gray-300 mb-4">
-        React • Tailwind CSS • Framer Motion • Vite
-      </p>
-      <a
-        href="https://github.com/charulata871/portfolio"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-cyan-400 transition"
-      >
-        View Code →
-      </a>
-    </motion.div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-    {/* BLACKJACK (New) */}
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
-    >
-      <h3 className="text-2xl font-semibold mb-4 text-white">
-        Blackjack Game (GitHub Repo)
-      </h3>
-      <p className="text-gray-400 mb-4">
-        A JavaScript game repository with Blackjack logic and interactive UI.
-        Explore the repository code and see how the game is structured.
-      </p>
-      <p className="text-sm text-gray-300 mb-4">HTML • CSS • JavaScript</p>
-      <a
-        href="https://github.com/charulata871/Black-jack"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-cyan-400 transition"
-      >
-        View Code →
-      </a>
-    </motion.div>
+          {/* PORTFOLIO PROJECT */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
+          >
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Portfolio Website
+            </h3>
+            <p className="text-gray-400 mb-4">
+              A responsive personal portfolio website built using React, Tailwind CSS, and Framer Motion. It showcases skills, projects, and includes a resume download.
+            </p>
+            <p className="text-sm text-gray-300 mb-4">
+              React • Tailwind CSS • Framer Motion • Vite
+            </p>
+            <a
+              href="https://github.com/charulata871/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition"
+            >
+              View Code →
+            </a>
+          </motion.div>
 
-    {/* GREEN PATH */}
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
-    >
-      <h3 className="text-2xl font-semibold mb-4 text-white">
-        The Green Path
-      </h3>
-      <p className="text-gray-400 mb-4">
-        Interactive web-based game focusing on DOM manipulation and responsive design.
-      </p>
-      <p className="text-sm text-gray-300 mb-4">HTML • CSS • JavaScript</p>
-      <a
-        href="https://github.com/AS-pngg/The-Green-Path"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-cyan-400 transition"
-      >
-        View Code →
-      </a>
-    </motion.div>
+          {/* BLACKJACK (New) */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
+          >
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Blackjack Game (GitHub Repo)
+            </h3>
+            <p className="text-gray-400 mb-4">
+              A JavaScript game repository with Blackjack logic and interactive UI.
+            </p>
+            <p className="text-sm text-gray-300 mb-4">HTML • CSS • JavaScript</p>
+            <a
+              href="https://github.com/charulata871/Black-jack"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition"
+            >
+              View Code →
+            </a>
+          </motion.div>
 
-  </div>
-</section>
+          {/* GREEN PATH */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
+          >
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              The Green Path
+            </h3>
+            <p className="text-gray-400 mb-4">
+              Interactive web-based game focusing on DOM manipulation and responsive design.
+            </p>
+            <p className="text-sm text-gray-300 mb-4">HTML • CSS • JavaScript</p>
+            <a
+              href="https://github.com/AS-pngg/The-Green-Path"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition"
+            >
+              View Code →
+            </a>
+          </motion.div>
+
+        </div>
+      </section>
 
       {/* ACTIVITIES */}
       <section className="py-24 px-6 bg-gray-900">
-        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400">Activities & Interests 🤖</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400 flex justify-center items-center gap-3">
+          <FaStar />
+          Activities & Interests
+        </h2>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -213,7 +225,10 @@ function App() {
 
       {/* SKILLS */}
       <section id="skills" className="py-24 px-6 bg-gray-950">
-        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400">Skills 🤖</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400 flex justify-center items-center gap-3">
+          <FaTools />
+          Skills
+        </h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-gray-300">
           <div>
             <h3 className="text-xl font-semibold mb-4 text-white">Languages</h3>
@@ -232,8 +247,10 @@ function App() {
 
       {/* CONTACT */}
       <section id="contact" className="relative py-32 px-6 bg-gradient-to-b from-gray-950 via-black to-gray-900 overflow-hidden">
-        <h2 className="text-5xl font-bold text-center mb-12 text-cyan-400 animate-pulse">Connect With Me 🤖</h2>
-
+        <h2 className="text-5xl font-bold text-center mb-12 text-cyan-400 animate-pulse flex justify-center items-center gap-3">
+          <FaAddressBook />
+          Contact Me
+        </h2>
         <div className="max-w-xl mx-auto text-center space-y-8 z-10 relative">
           <p className="text-gray-300 text-lg">Let's collaborate on AI & ML projects 🚀✨</p>
 
@@ -243,14 +260,14 @@ function App() {
             </motion.a>
 
             <motion.a 
-  href="https://www.linkedin.com/in/charu-lata-022a32354"
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ scale: 1.3, color: "#8a2be2" }}
-  className="transition-colors duration-300 text-gray-300"
->
-  <FaLinkedin />
-</motion.a>
+              href="https://www.linkedin.com/in/charu-lata-022a32354"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.3, color: "#8a2be2" }}
+              className="transition-colors duration-300 text-gray-300"
+            >
+              <FaLinkedin />
+            </motion.a>
 
             <motion.a href="mailto:cln.charulata.871@gmail.com" whileHover={{ scale: 1.3, color: "#00ffff" }} className="transition-colors duration-300 text-gray-300">
               <FaEnvelope />
