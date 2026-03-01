@@ -5,7 +5,7 @@ import { FaDownload } from "react-icons/fa";
 
 function App() {
   return (
-    <div className="bg-gray-950 text-gray-300 scroll-smooth">
+    <div className="min-h-screen bg-black text-gray-300 scroll-smooth">
 
       {/* NAVBAR */}
       <nav className="fixed w-full bg-gray-900/90 backdrop-blur-md shadow-md z-50">
@@ -112,100 +112,78 @@ function App() {
 </section>
 {/* PROJECTS */}
 <section id="projects" className="py-24 px-6 bg-gray-950">
-  <h2 className="text-4xl font-bold text-center mb-12 text-cyan-400">
-    Projects 🤖
+  <h2 className="text-4xl font-bold text-center mb-12 text-white tracking-wide">
+    Projects
   </h2>
 
   <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
     {/* PORTFOLIO PROJECT */}
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
       whileHover={{ scale: 1.05 }}
-      className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-cyan-400/40 transition duration-300"
+      className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
     >
-      <h3 className="text-2xl font-semibold mb-4">
-        Personal Portfolio Website
+      <h3 className="text-2xl font-semibold mb-4 text-white">
+        Portfolio Website
       </h3>
-
       <p className="text-gray-400 mb-4">
-        A modern and fully responsive portfolio website built using React and Tailwind CSS.
-        It includes smooth animations using Framer Motion, resume download functionality,
-        and an interactive UI to showcase skills and projects.
+        A responsive personal portfolio website built using React, Tailwind CSS, and Framer Motion. It showcases skills, projects, and includes a resume download.
       </p>
-
-      <p className="text-sm text-cyan-400 mb-4">
+      <p className="text-sm text-gray-300 mb-4">
         React • Tailwind CSS • Framer Motion • Vite
       </p>
-
       <a
-        href="https://github.com/charulata871"
+        href="https://github.com/charulata871/portfolio"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline text-gray-300"
+        className="hover:text-cyan-400 transition"
       >
-        View on GitHub →
+        View Code →
       </a>
     </motion.div>
 
-    {/* BLACKJACK PROJECT */}
+    {/* BLACKJACK (New) */}
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.2 }}
       whileHover={{ scale: 1.05 }}
-      className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-cyan-400/40 transition duration-300"
+      className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
     >
-      <h3 className="text-2xl font-semibold mb-4">Blackjack Game</h3>
-
+      <h3 className="text-2xl font-semibold mb-4 text-white">
+        Blackjack Game (GitHub Repo)
+      </h3>
       <p className="text-gray-400 mb-4">
-        A browser-based card game developed using JavaScript logic.
-        Implements arrays, conditional statements, random number generation,
-        and dynamic DOM manipulation.
+        A JavaScript game repository with Blackjack logic and interactive UI.
+        Explore the repository code and see how the game is structured.
       </p>
-
-      <p className="text-sm text-cyan-400 mb-4">
-        HTML • CSS • JavaScript
-      </p>
-
+      <p className="text-sm text-gray-300 mb-4">HTML • CSS • JavaScript</p>
       <a
-        href="https://github.com/charulata871/Projects"
+        href="https://github.com/charulata871/Black-jack"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline text-gray-300"
+        className="hover:text-cyan-400 transition"
       >
-        View on GitHub →
+        View Code →
       </a>
     </motion.div>
 
-    {/* GREEN PATH PROJECT */}
+    {/* GREEN PATH */}
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.4 }}
       whileHover={{ scale: 1.05 }}
-      className="bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-cyan-400/40 transition duration-300"
+      className="bg-gray-900 border border-gray-800 p-6 rounded-xl transition-all duration-300 hover:border-gray-600 hover:-translate-y-1"
     >
-      <h3 className="text-2xl font-semibold mb-4">The Green Path</h3>
-
+      <h3 className="text-2xl font-semibold mb-4 text-white">
+        The Green Path
+      </h3>
       <p className="text-gray-400 mb-4">
-        An interactive web-based game featuring event handling and DOM manipulation.
-        Focused on user interaction, responsiveness, and clean UI design.
+        Interactive web-based game focusing on DOM manipulation and responsive design.
       </p>
-
-      <p className="text-sm text-cyan-400 mb-4">
-        HTML • CSS • JavaScript
-      </p>
-
+      <p className="text-sm text-gray-300 mb-4">HTML • CSS • JavaScript</p>
       <a
         href="https://github.com/AS-pngg/The-Green-Path"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline text-gray-300"
+        className="hover:text-cyan-400 transition"
       >
-        View on GitHub →
+        View Code →
       </a>
     </motion.div>
 
