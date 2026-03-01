@@ -147,7 +147,7 @@ function App() {
               rel="noopener noreferrer"
               className="hover:text-cyan-400 transition"
             >
-              View Code →
+              Github  →
             </a>
           </motion.div>
 
@@ -169,7 +169,7 @@ function App() {
               rel="noopener noreferrer"
               className="hover:text-cyan-400 transition"
             >
-              View Code →
+              Github  →
             </a>
           </motion.div>
 
@@ -191,7 +191,7 @@ function App() {
               rel="noopener noreferrer"
               className="hover:text-cyan-400 transition"
             >
-              View Code →
+              Github  →
             </a>
           </motion.div>
 
